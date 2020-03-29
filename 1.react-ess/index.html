@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>React Project</title>
+    <script src="https://unpkg.com/react@16.7.0/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@16.7.0/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      let city = "Orlando";
+      const Hello = ({ library, message }) => {
+        return (
+          <div className="heading">
+            <h1>Welcome to {library}</h1>
+            <p>{message}</p>
+          </div>
+        );
+      };
+
+      const Lake = ({ name }) => <h1>{name}</h1>;
+      const App = () => (
+        <div>
+          <Lake name="TEst" />
+          <Lake name="TEst" />
+          <Lake name="TEst" />
+        </div>
+      );
+      ReactDOM.render(<App />, document.getElementById("root"));
+    </script>
+  </body>
+</html>
